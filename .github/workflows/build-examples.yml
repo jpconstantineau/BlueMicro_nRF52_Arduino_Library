@@ -9,10 +9,7 @@ jobs:
       matrix:
         sketch: ['functions']
         fqbn_long: ['adafruit:nrf52:feather52832',
-                    'adafruit:nrf52:feather52840',
-                    'adafruit:samd:adafruit_feather_m0_express',
-                    'adafruit:samd:adafruit_feather_m4',
-                    'rp2040:rp2040:adafruit_feather',]
+                    'adafruit:nrf52:feather52840',]
 
     runs-on: ubuntu-latest
     outputs:
