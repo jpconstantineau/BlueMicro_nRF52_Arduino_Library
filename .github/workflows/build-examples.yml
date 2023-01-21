@@ -63,7 +63,7 @@ jobs:
           arduino-cli core list
           arduino-cli board listall
           # Install library dependencies
-          arduino-cli lib install "Adafruit TinyUSB Library"
+          arduino-cli lib install "Adafruit TinyUSB Library bluemicro_hid"
           arduino-cli lib list
 
       - name: Install BSP and Libraries - RP2040
