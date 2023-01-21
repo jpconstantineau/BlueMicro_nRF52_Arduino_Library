@@ -33,7 +33,7 @@ jobs:
       # We use the arduino/setup-arduino-cli action to install and
       # configure the Arduino CLI on the system.
       - name: Setup Arduino CLI
-        uses: jpconstantineau/setup-arduino-cli@v1.1.1
+        uses: arduino/setup-arduino-cli@v1.1.1
         
       - name: Install BSP and Libraries - nRF52
         if:  ${{ contains( matrix.fqbn_long , 'nrf52' ) }}
