@@ -4,6 +4,10 @@
 
 #include "bluemicro_nrf52.h"
 
+
+
+
+
 void setupGpio() 
 {
       // this code enables the NFC pins to be GPIO.
@@ -99,8 +103,9 @@ void reboot(void)
     NVIC_SystemReset();
 }
 
-extern "C" void vApplicationIdleHook(void) {
-    sd_power_mode_set(NRF_POWER_MODE_LOWPWR); // 944uA
-    //sd_power_mode_set(NRF_POWER_MODE_CONSTLAT); // 1.5mA
-    sd_app_evt_wait();  // puts the nrf52 to sleep when there is nothing to do.  You need this to reduce power consumption. (removing this will increase current to 8mA)
-};
+//extern "C" void vApplicationIdleHook(void) {
+ //   sd_power_mode_set(NRF_POWER_MODE_LOWPWR); // 944uA
+//    //sd_power_mode_set(NRF_POWER_MODE_CONSTLAT); // 1.5mA
+//    sd_app_evt_wait();  // puts the nrf52 to sleep when there is nothing to do.  You need this to reduce power consumption. (removing this will increase current to 8mA)
+//;
+
