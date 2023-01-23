@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 BlueMicro_Engine_Arduino_Library contributors (https://github.com/jpconstantineau/BlueMicro_Engine_Arduino_Library/graphs/contributors)
+// SPDX-FileCopyrightText: 2022-2023 BlueMicro_nRF52_Arduino_Library contributors (https://github.com/jpconstantineau/BlueMicro_nRF52_Arduino_Library/graphs/contributors)
 //
 // SPDX-License-Identifier: BSD-3-Clause
 
@@ -11,7 +11,7 @@
 
 
 template < size_t N1,  size_t N2>
-void sleepnRF52_C2R( const byte (&rows)[N1], const byte (&columns)[N2] ) {
+void sleep_C2R( const byte (&rows)[N1], const byte (&columns)[N2] ) {
   for(int j = 0; j < N1; ++j) {                             
     //set the current row as OUPUT and LOW
     pinMode(rows[j], OUTPUT);                                      
@@ -25,7 +25,7 @@ void sleepnRF52_C2R( const byte (&rows)[N1], const byte (&columns)[N2] ) {
 }
 
 template < size_t N1,  size_t N2>
-void sleepnRF52_R2C( const byte (&rows)[N1], const byte (&columns)[N2] ) {
+void sleep_R2C( const byte (&rows)[N1], const byte (&columns)[N2] ) {
   for(int j = 0; j < N1; ++j) {                             
     //set the current row as OUPUT and LOW
     pinMode(rows[j], OUTPUT);
