@@ -64,7 +64,7 @@ void sleep_R2C( const byte (&rows)[N1], const byte (&columns)[N2] ) {
 template < size_t N1,  size_t N2>
 trigger_keys_t scanMatrix_C2R(trigger_keys_t activeKeys,  const byte (&rows)[N1], const byte (&columns)[N2] )
 {
-    bool has_key = false;
+    //bool has_key = false;
     PINDATATYPE pinreg = 0;
     activeKeys.clear();
     //Setting up Scanning, Enabling all columns
@@ -93,7 +93,7 @@ trigger_keys_t scanMatrix_C2R(trigger_keys_t activeKeys,  const byte (&rows)[N1]
               {
                 uint8_t keynumber = (j-1)*N2 + i;
                 activeKeys.push_back(keynumber);
-                has_key = true;
+                //has_key = true;
               }
         }
         // READ NEXT ROW
@@ -109,7 +109,7 @@ trigger_keys_t scanMatrix_C2R(trigger_keys_t activeKeys,  const byte (&rows)[N1]
             uint8_t keynumber = (N1-1)*N2 + i;
             //Serial.println(keynumber);
             activeKeys.push_back(keynumber);
-            has_key = true;
+            //has_key = true;
           }
     }
     /*************/ 
@@ -124,7 +124,7 @@ trigger_keys_t scanMatrix_C2R(trigger_keys_t activeKeys,  const byte (&rows)[N1]
 template < size_t N1,  size_t N2>
 trigger_keys_t scanMatrix_R2C(trigger_keys_t activeKeys,  const byte (&rows)[N1], const byte (&columns)[N2] )
 {
-    bool has_key = false;
+    //bool has_key = false;
     PINDATATYPE pinreg = 0;
     activeKeys.clear();
     //Setting up Scanning, Enabling all columns
@@ -154,7 +154,7 @@ trigger_keys_t scanMatrix_R2C(trigger_keys_t activeKeys,  const byte (&rows)[N1]
                 uint8_t keynumber = (j-1)*N2 + i;
                 Serial.println(keynumber);
                 activeKeys.push_back(keynumber);
-                has_key = true;
+                //has_key = true;
               }
         }
         // READ NEXT ROW
@@ -170,7 +170,7 @@ trigger_keys_t scanMatrix_R2C(trigger_keys_t activeKeys,  const byte (&rows)[N1]
             uint8_t keynumber = (N1-1)*N2 + i;
             Serial.println(keynumber);
             activeKeys.push_back(keynumber);
-            has_key = true;
+            //has_key = true;
           }
     }
     /*************/ 
