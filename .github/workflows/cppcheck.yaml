@@ -1,6 +1,6 @@
-name: linting
+name: linting using cppcheck
 
-on: [pull_request]
+on: [push]
 jobs:
   linting:
     name: cppcheck
