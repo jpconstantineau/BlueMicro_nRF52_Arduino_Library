@@ -4,7 +4,7 @@
 
 #include "bluemicro_nrf52.h"
 
-
+// cppcheck-suppress unusedFunction
 void setupGpio() 
 {
       // this code enables the NFC pins to be GPIO.
@@ -22,6 +22,7 @@ void setupGpio()
       } // end of NFC switch code.
 }
 
+// cppcheck-suppress unusedFunction
 void setupWDT()
 {
   // Configure WDT
@@ -31,12 +32,14 @@ void setupWDT()
   NRF_WDT->TASKS_START    = 1;                // start WDT
 }
 
+// cppcheck-suppress unusedFunction
 void updateWDT()
 {
   NRF_WDT->RR[0] = WDT_RR_RR_Reload;          // pet watchdog
 }
 
 /**************************************************************************************************************************/
+// cppcheck-suppress unusedFunction
 uint32_t analogReadVDD()
 {
   // thanks to vladkozlov69 on github.
@@ -44,7 +47,7 @@ uint32_t analogReadVDD()
 
    // uint32_t pin = SAADC_CH_PSELP_PSELP_VDD;
     //uint32_t resolution;
-    int16_t value;
+    int16_t value = 0;
 
     //resolution = 10;
 
@@ -94,7 +97,7 @@ uint32_t analogReadVDD()
     return value; 
 }
 
-
+// cppcheck-suppress unusedFunction
 void reboot(void)
 {
     NVIC_SystemReset();
